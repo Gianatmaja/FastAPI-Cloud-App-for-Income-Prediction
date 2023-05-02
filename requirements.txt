@@ -9,3 +9,4 @@ uvicorn
 gunicorn
 pandas_profiling
 dvc
+xgboost
