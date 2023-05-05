@@ -1,10 +1,23 @@
+'''
+This script contains small functions used throughout the data_cleaning.py and
+model_runner.py files.
+
+Author: Gian Atmaja
+Created: 4 May 2023
+'''
+
+# Import required libraries
 import pandas as pd
 import logging
 from sklearn.preprocessing import LabelEncoder
 from sklearn.preprocessing import RobustScaler
 from pickle import load
 
+# Setup logging
+logging.getLogger().setLevel(logging.INFO)
+logging.basicConfig(format='%(asctime)s - %(levelname)s - %(message)s', level=logging.INFO)
 
+# Function to read data
 def read_data(filepath_str):
     '''
     Input:
@@ -33,7 +46,12 @@ def return_cols_to_strip():
     return cols_to_strip_list
 
 
+# Function to return list of features to be encoded
 def return_le_features():
+    '''
+    Output:
+        - le_features_list (list): list of features to be encoded
+    '''
 
     le_features_list = ['workclass', 'marital-status', 'occupation', 
                'relationship', 'race','sex', 'native-country']
@@ -41,7 +59,14 @@ def return_le_features():
     return le_features_list
 
 
+# Function to preprocess target value
 def preprocess_target(df):
+    '''
+    Input:
+        - df (Pandas DF): Input DF
+    Output:
+        - df (Pandas DF): Pandas DF after target preprocessing
+    '''
 
     df['salary'] = df['salary'].replace({'<=50K': 0, '>50K':1})
 
@@ -49,6 +74,10 @@ def preprocess_target(df):
 
 
 def return_cat_features():
+    '''
+    Output:
+        - cat_features_list (list): list of categorical features
+    '''
 
     cat_features_list = ['workclass', 'education', 'marital-status', 'occupation', 
         'relationship', 'race','sex', 'native-country']

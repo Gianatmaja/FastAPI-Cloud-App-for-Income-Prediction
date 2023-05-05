@@ -13,7 +13,9 @@ import logging
 
 from utils import read_data, return_cols_to_strip
 
+# Setup logging
 logging.getLogger().setLevel(logging.INFO)
+logging.basicConfig(format='%(asctime)s - %(levelname)s - %(message)s', level=logging.INFO)
 
 # Function to clean data
 def clean_data(filepath_str):
