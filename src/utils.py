@@ -73,6 +73,7 @@ def preprocess_target(df):
     return df
 
 
+# Function to return categorical features list
 def return_cat_features():
     '''
     Output:
@@ -83,3 +84,16 @@ def return_cat_features():
         'relationship', 'race','sex', 'native-country']
 
     return cat_features_list
+
+
+# Function to load model
+def load_model(model_path):
+    '''
+    Input:
+        - model_path (str): string value of model filepath
+    Output:
+        - model (obj): model Python object
+    '''
+    model = load(open(model_path, 'rb'))
+
+    return model
