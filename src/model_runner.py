@@ -58,8 +58,14 @@ def train_model(filepath_str):
     y_preds = model.predict(X_test)
 
     acc = accuracy_score(y_preds, y_test)
+    prec = precision_score(y_preds, y_test, zero_division = 0)
+    rec = recall_score(y_preds, y_test, zero_division = 0)
+    f1 = f1_score(y_preds, y_test, zero_division = 0)
 
     logging.info('Model accuracy: %.3f' % acc)
+    logging.info('Model precision: %.3f' % prec)
+    logging.info('Model recall: %.3f' % rec)
+    logging.info('Model f1 score: %.3f' % f1)
 
     filepath = 'model/xgb_model.pkl'
 
