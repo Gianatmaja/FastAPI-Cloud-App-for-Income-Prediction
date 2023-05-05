@@ -264,7 +264,7 @@ def scale_data(data, process_mode):
     return data
 
 
-# Function to get XGBoost model
+# Function to obtain XGBoost model
 def get_model():
     '''
     Output:
