@@ -86,7 +86,7 @@ def return_cat_features():
     return cat_features_list
 
 
-# Function to load model
+# Function to load model pickle file
 def load_model(model_path):
     '''
     Input:
