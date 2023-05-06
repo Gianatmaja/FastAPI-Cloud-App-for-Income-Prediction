@@ -47,3 +47,18 @@ jobs:
     - name: Test with pytest
       run: |
         pytest tests/ -vv
+
+  deploy:
+  
+    runs-on: ubuntu-latest
+    
+    needs: [build]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Deploy to Heroku
+        uses: gianatmaja/render-deploy-action@v0.0.8
+        with:
+          service-id: ${{ secrets.MY_RENDER_SERVICE_ID }}
+          api-key: ${{ secrets.MY_RENDER_API_KEY }}
+
