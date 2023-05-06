@@ -18,15 +18,6 @@ from pydantic import BaseModel
 from src.model_runner import process_inference_data
 from src.utils import load_model
 
-'''
-# Set up DVC on Heroku
-if "DYNO" in os.environ and os.path.isdir(".dvc"):
-    os.system("dvc config core.no_scm true")
-    if os.system("dvc pull") != 0:
-        exit("dvc pull failed")
-    os.system("rm -r .dvc .apt/usr/lib/dvc")
-'''
-
 
 # Create app
 app = FastAPI()
