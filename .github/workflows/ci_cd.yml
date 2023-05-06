@@ -56,8 +56,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Deploy to Heroku
-        uses: gianatmaja/render-deploy-action@v0.0.8
+      - name: Deploy to Render
+        uses: johnbeynon/render-deploy-action@v0.0.8
         with:
           service-id: ${{ secrets.MY_RENDER_SERVICE_ID }}
           api-key: ${{ secrets.MY_RENDER_API_KEY }}
