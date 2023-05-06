@@ -49,7 +49,13 @@ Finally, to run individual scripts, run the following command:
     python src/{SCRIPT_NAME.py}
 
 ### CI/CD Using GitHub Actions
+CI (Continuous Integration) and CD (Continuous Deployment) is integrated to this repository through
+the use of GitHub Actions. 
 
 ### ML Model Building
+An XGBoost model was trained on the Census Bureau Dataset, obtained from the UCL ML Repository, to predict
+whether a person's annual income is over or under $50K.
+
+More details on the model can be found in the [model card](https://github.com/Gianatmaja/fastapi-cloud-app/blob/main/xgboost_model_card.md)
 
 ### API Creation & Deployment
