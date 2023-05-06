@@ -11,7 +11,7 @@ import numpy as np
 import pandas as pd
 import logging
 
-from utils import read_data, return_cols_to_strip
+from src.utils import read_data, return_cols_to_strip
 
 # Setup logging
 logging.getLogger().setLevel(logging.INFO)
