@@ -117,8 +117,11 @@ def assess_slice_performance(model, data):
                                                             ignore_index = True)
             logging.info('Performance metrics on data slice saved.')
 
-    slice_performance_df.to_csv('Performance_on_slices.csv', index = False)
-    logging.info('Performance on data slices stored in Performance_on_slices.csv')
+    with open('slice_output.txt', 'a') as f:
+        df_string = slice_performance_df.to_string(header=True, index=False)
+        f.write(df_string)
+
+    logging.info('Performance on data slices stored in slice_output.txt')
 
     return slice_performance_df
 

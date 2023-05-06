@@ -1,4 +1,13 @@
-# Put the code for your API here.
+'''
+This script contains the main codes of the FAST API app, including functions for
+POST and GET, the POST input schema, as well as prediction using the previously
+trained XGBoost model.
+
+Author: Gian Atmaja
+Created: 6 May 2023
+'''
+
+# Import required libraries
 import os
 from fastapi import FastAPI
 from typing import Literal
@@ -136,11 +145,14 @@ async def predict(input: ModelInput):
         'capital-gain', 'capital-loss', 'hours-per-week', 'native-country'
     ]
 
+    # Get df of input data
     input_df = pd.DataFrame(data=input_data, columns=original_col_names)
 
+    # Process data and predict y
     X = process_inference_data(input_df)
     y = model.predict(X)
 
+    # Map y to income category, then return output
     if y == 0:
         pred = '<=50K'
     elif y == 1:
@@ -152,5 +164,5 @@ async def predict(input: ModelInput):
 
 '''
 if __name__ == "__main__":
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)
 '''

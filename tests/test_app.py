@@ -1,12 +1,19 @@
-from fastapi.testclient import TestClient
+'''
+This script contains the unit tests for the FAST API app.
 
-# Import our app from main.py.
+Author: Gian Atmaja
+Created: 6 May 2023
+'''
+
+# Import required libraries
+from fastapi.testclient import TestClient
 from main import app
 
-# Instantiate the testing client with our app.
+# Instantiate the testing client with the app.
 client = TestClient(app)
 
 
+# Test GET
 def test_get_root():
     """ Test the root page get a succesful response"""
     r = client.get("/")
@@ -15,6 +22,7 @@ def test_get_root():
         "Hi": "This app predicts whether the input person's annual income exceeds $50 000."}
 
 
+# Test POST for '<=50K' class
 def test_post_predict_lower():
     """ Test an example when income is less than 50K """
 
@@ -39,6 +47,7 @@ def test_post_predict_lower():
     assert r.json() == {"Income prediction": "<=50K"}
 
 
+# Test POST for '>50K' class
 def test_post_predict_higher():
     """ Test an example when income is higher than 50K """
     r = client.post("/predict-income", json={

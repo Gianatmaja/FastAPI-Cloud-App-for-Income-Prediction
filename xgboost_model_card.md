@@ -30,7 +30,7 @@ The overall (test) metrics of the XGBoost model are as follows:
 - Recall: 0.751
 - F1-Score: 0.701
 
-Performance on specific data-slices can be found [here](https://github.com/Gianatmaja/fastapi-cloud-app/blob/main/Performance_on_slices.csv).
+Performance on specific data-slices can be found [here](https://github.com/Gianatmaja/fastapi-cloud-app/blob/main/slice_output.txt).
 
 ## Ethical Considerations
 Given that the data contains attributes such as occupation, workclass, sex, race, etc., consideration on how the 
