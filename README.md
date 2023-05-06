@@ -1,7 +1,7 @@
 # FASTAPI Cloud App
 A classification model on publicly available Census Bureau data, deployed using FastAPI & Render, with CI/CD incorporated using GitHub Actions.
 
-### Project Structure
+## Project Structure
 The main files of this repository follow the following structure
 
     .
@@ -31,7 +31,7 @@ The main files of this repository follow the following structure
     ├── xgboost_model_card.md
     └── README.md
 
-### Running the Project
+## Running the Project
 To install the requirements, run
 
     pip install -r requirements.txt
@@ -46,16 +46,16 @@ Next, to run the unit tests, run the following command:
 
 Finally, to run individual scripts, run the following command:
 
-    python src/{SCRIPT_NAME.py}
+    python src/{SCRIPT_NAME}.py
 
-### CI/CD Using GitHub Actions
+## CI/CD Using GitHub Actions
 CI (Continuous Integration) and CD (Continuous Deployment) is integrated to this repository through
 the use of GitHub Actions. 
 
-### ML Model Building
+## ML Model Building
 An XGBoost model was trained on the Census Bureau Dataset, obtained from the UCL ML Repository, to predict
 whether a person's annual income is over or under $50K.
 
 More details on the model can be found in the [model card](https://github.com/Gianatmaja/fastapi-cloud-app/blob/main/xgboost_model_card.md)
 
-### API Creation & Deployment
+## API Creation & Deployment
