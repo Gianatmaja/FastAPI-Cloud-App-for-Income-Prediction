@@ -20,7 +20,7 @@ from xgboost import XGBClassifier
 from pickle import dump
 from pickle import load
 
-from utils import read_data, return_le_features, preprocess_target, return_cat_features
+from src.utils import read_data, return_le_features, preprocess_target, return_cat_features
 
 # Setup options & warnings
 pd.options.mode.chained_assignment = None
@@ -174,6 +174,24 @@ def process_data(df, process_mode):
     X = scale_data(X, process_mode)
     
     return X,y
+
+
+# Function to process data (if target is not present)
+def process_inference_data(df):
+    '''
+    Input:
+        - df (Pandas DF): Pandas DF to be processed
+    Output:
+        - X (Numpy array): X features
+    '''
+
+    LE_Features = return_le_features()
+
+    df = encode_features(df, LE_Features, 'test')
+    
+    X = scale_data(df, 'test')
+    
+    return X
 
 
 # Function to encode categorical features
