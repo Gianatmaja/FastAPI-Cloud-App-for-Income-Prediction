@@ -40,10 +40,12 @@ Performance on specific data-slices can be found [here](https://github.com/Giana
 Given that the data contains attributes such as occupation, workclass, sex, race, etc., consideration on how the 
 model performs accross different subgroups must be given.
 
-Our assessment of the model's fairness across different population subgroups can be found in the
+Our assessment of the model's fairness across different population subgroups, using Aequitas, can be found in the
 [model bias & fairness notebook](https://github.com/Gianatmaja/fastapi-cloud-app/blob/main/notebooks/Model%20Bias%20%26%20Fairness.ipynb).
 
 ![Model Fairness Notebook](https://github.com/Gianatmaja/fastapi-cloud-app/blob/main/screenshots/fairness.png)
+
+For more information, refer to the [Aequitas documentation](https://dssg.github.io/aequitas/30_seconds_aequitas.html).
 
 ## Caveats and Recommendations
 Caveats:

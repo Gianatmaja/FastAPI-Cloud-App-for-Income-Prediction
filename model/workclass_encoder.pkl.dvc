@@ -1,0 +1,4 @@
+outs:
+- md5: 49dacb9e4325620c5996e3de39abbcb5
+  size: 357
+  path: workclass_encoder.pkl

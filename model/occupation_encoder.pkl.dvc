@@ -1,0 +1,4 @@
+outs:
+- md5: 1ed8b4416878b7422bd52dadf2d8d3cb
+  size: 478
+  path: occupation_encoder.pkl

@@ -1,0 +1,4 @@
+outs:
+- md5: f9da8980d061e4b3892b415a8b08dfb4
+  size: 316
+  path: relationship_encoder.pkl

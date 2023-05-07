@@ -1,1 +1,10 @@
 
+/xgb_model.pkl
+/marital-status_encoder.pkl
+/native-country_encoder.pkl
+/occupation_encoder.pkl
+/race_encoder.pkl
+/relationship_encoder.pkl
+/sex_encoder.pkl
+/workclass_encoder.pkl
+/robust_scaler.pkl

@@ -1,0 +1,4 @@
+outs:
+- md5: 0ec1180fc6017281dcdf92ade77cfbad
+  size: 852
+  path: robust_scaler.pkl

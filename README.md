@@ -64,11 +64,13 @@ Deployment (CD) to the Render cloud app.
 
 ![CD Steps After CI](https://github.com/Gianatmaja/fastapi-cloud-app/blob/main/screenshots/continuous_deployment.png)
 
+For more information, refer to the [GitHub Actions documentation](https://docs.github.com/en/actions).
+
 ## ML Model Building
 An XGBoost model was trained on the Census Bureau Dataset, obtained from the UCL ML Repository, to predict
-whether a person's annual income is over or under $50K.
+whether a person's annual income is over or under $50K. More details on the model (as well as the EDA, training, and model fairness assessment process) can be found in the [model card](https://github.com/Gianatmaja/fastapi-cloud-app/blob/main/xgboost_model_card.md).
 
-More details on the model (as well as the EDA, training, and model fairness assessment process) can be found in the [model card](https://github.com/Gianatmaja/fastapi-cloud-app/blob/main/xgboost_model_card.md).
+The data and model files are version-controlled using DVC. For more information, refer to the [DVC documentation](https://dvc.org/doc).
 
 ## API Creation & Deployment
 The API is built using FastAPI, using the codes found in `main.py`. A snippet of the automatically-generated documentation by FastAPI can be found below.
@@ -86,3 +88,6 @@ The POST method can be used to obtain a prediction from the trained ML model. To
 An example of this process, and the response generated from the live API, can be found below.
 
 ![FastAPI App Docs](https://github.com/Gianatmaja/fastapi-cloud-app/blob/main/screenshots/live_post.png)
+
+For more information, refer to the [FastAPI](https://fastapi.tiangolo.com/) and [Render](https://render.com/docs)
+documentations.

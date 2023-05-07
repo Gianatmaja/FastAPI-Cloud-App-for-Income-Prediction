@@ -1,0 +1,4 @@
+outs:
+- md5: ae71f19cc1eef4a2825ab77dfe0d0071
+  size: 703
+  path: native-country_encoder.pkl

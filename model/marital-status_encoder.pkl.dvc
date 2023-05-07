@@ -1,0 +1,4 @@
+outs:
+- md5: 82b6b429ac30670030fc44a45f93829e
+  size: 356
+  path: marital-status_encoder.pkl

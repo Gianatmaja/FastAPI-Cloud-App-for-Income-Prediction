@@ -1,0 +1,4 @@
+outs:
+- md5: b357e72f2d62b7aa55b91cbf9597366c
+  size: 260
+  path: sex_encoder.pkl
