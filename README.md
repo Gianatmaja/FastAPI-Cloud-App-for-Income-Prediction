@@ -68,7 +68,7 @@ Deployment (CD) to the Render cloud app.
 An XGBoost model was trained on the Census Bureau Dataset, obtained from the UCL ML Repository, to predict
 whether a person's annual income is over or under $50K.
 
-More details on the model (as well as the EDA, training, and model fairness assessment process) can be found in the [model card](https://github.com/Gianatmaja/fastapi-cloud-app/blob/main/xgboost_model_card.md)
+More details on the model (as well as the EDA, training, and model fairness assessment process) can be found in the [model card](https://github.com/Gianatmaja/fastapi-cloud-app/blob/main/xgboost_model_card.md).
 
 ## API Creation & Deployment
 The API is built using FastAPI, using the codes found in `main.py`. A snippet of the automatically-generated documentation by FastAPI can be found below.
