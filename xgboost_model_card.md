@@ -6,7 +6,9 @@ The model used is an XGBoost, with a max_depth hyperparameter of 6, and an n_est
 set of hyperparemeters were chosen as they were the best performing combination, from a range of other values, trained 
 with the use of a stratified 5-fold validation on the training dataset.
 
-More information on the model building process can be found in [the model building notebook](https://github.com/Gianatmaja/fastapi-cloud-app/blob/main/notebooks/Model%20Building.ipynb).
+More information on the model building process can be found in the [model building notebook](https://github.com/Gianatmaja/fastapi-cloud-app/blob/main/notebooks/Model%20Building.ipynb).
+
+![Model Building Notebook](https://github.com/Gianatmaja/fastapi-cloud-app/blob/main/screenshots/ml_nb.png)
 
 For more information on the algorithm used, refer to the [XGBoost documentation](https://xgboost.readthedocs.io/en/stable/).
 
@@ -18,7 +20,9 @@ The training data used is the publicly available [Census Bureau dataset](https:/
 obtained from the [UCL ML Repository](https://archive.ics.uci.edu/ml/index.php). More information on the dataset can be found on 
 the dataset page.
 
-An EDA of the dataset can be found [here](https://github.com/Gianatmaja/fastapi-cloud-app/blob/main/notebooks/EDA.ipynb).
+An EDA of the dataset can be found in the [EDA notebook](https://github.com/Gianatmaja/fastapi-cloud-app/blob/main/notebooks/EDA.ipynb).
+
+![EDA Notebook](https://github.com/Gianatmaja/fastapi-cloud-app/blob/main/screenshots/eda_nb.png)
 
 ## Evaluation Data
 80% of the data was used for training purposes, whereas 20% was set aside to evaluate the trained models.
@@ -36,8 +40,10 @@ Performance on specific data-slices can be found [here](https://github.com/Giana
 Given that the data contains attributes such as occupation, workclass, sex, race, etc., consideration on how the 
 model performs accross different subgroups must be given.
 
-Our assessment of the model's fairness across different population subgroups can be found in this 
-[notebook](https://github.com/Gianatmaja/fastapi-cloud-app/blob/main/notebooks/Model%20Bias%20%26%20Fairness.ipynb).
+Our assessment of the model's fairness across different population subgroups can be found in the
+[model bias & fairness notebook](https://github.com/Gianatmaja/fastapi-cloud-app/blob/main/notebooks/Model%20Bias%20%26%20Fairness.ipynb).
+
+![Model Fairness Notebook](https://github.com/Gianatmaja/fastapi-cloud-app/blob/main/screenshots/fairness.png)
 
 ## Caveats and Recommendations
 Caveats:
