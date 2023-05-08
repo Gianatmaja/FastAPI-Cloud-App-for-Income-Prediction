@@ -7,8 +7,8 @@ The main files of this repository follow the following structure.
     .
     ├── .dvc/                                   # DVC Configs
     ├── .github/workflows                       # CI/CD (with Github Actions) Codes
-    ├── data/                                   # DVC Metadata for input data
-    ├── model/                                  # Model-related files
+    ├── data/                                   # Metadata for Input Data (DVC Enabled)
+    ├── model/                                  # Metadata for Model-Related Files (DVC Enabled)
     ├── notebooks/                              # Jupyter Notebooks 
     │  ├── EDA.ipynb
     │  ├── Model Building.ipynb
@@ -64,13 +64,15 @@ Deployment (CD) to the Render cloud app.
 
 ![CD Steps After CI](https://github.com/Gianatmaja/fastapi-cloud-app/blob/main/screenshots/continuous_deployment.png)
 
-For more information, refer to the [GitHub Actions documentation](https://docs.github.com/en/actions).
+For more information on GitHub Actions, refer to the [GitHub Actions documentation](https://docs.github.com/en/actions).
 
 ## ML Model Building
 An XGBoost model was trained on the Census Bureau Dataset, obtained from the UCL ML Repository, to predict
 whether a person's annual income is over or under $50K. More details on the model (as well as the EDA, training, and model fairness assessment process) can be found in the [model card](https://github.com/Gianatmaja/fastapi-cloud-app/blob/main/xgboost_model_card.md).
 
-The data and model files are version-controlled using DVC. For more information, refer to the [DVC documentation](https://dvc.org/doc).
+The data and model-related (label encoder, scaler, and model pkl) files are version-controlled using DVC. The metadata for these files can be found inside `data/` and `model/`. 
+
+For more information on DVC, refer to the [DVC documentation](https://dvc.org/doc).
 
 ## API Creation & Deployment
 The API is built using FastAPI, using the codes found in `main.py`. A snippet of the automatically-generated documentation by FastAPI can be found below.
@@ -89,5 +91,4 @@ An example of this process, and the response generated from the live API, can be
 
 ![FastAPI App Docs](https://github.com/Gianatmaja/fastapi-cloud-app/blob/main/screenshots/live_post.png)
 
-For more information, refer to the [FastAPI](https://fastapi.tiangolo.com/) and [Render](https://render.com/docs)
-documentations.
+For more information on FastAPI and Render, refer to the [FastAPI](https://fastapi.tiangolo.com/) and [Render](https://render.com/docs) documentations.

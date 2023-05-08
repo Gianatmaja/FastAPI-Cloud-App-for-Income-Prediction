@@ -147,8 +147,8 @@ def model_inference(data, model_path):
     acc = accuracy_score(y_preds, y)
     logging.info('Model accuracy on prediction data: %.3f' % acc)
 
-    data.to_csv('Predictions.csv')
-    logging.info('Predictions saved to Predictions.csv')
+    data.to_csv('data/Predictions.csv')
+    logging.info('Predictions saved to data/Predictions.csv')
 
     return acc
 

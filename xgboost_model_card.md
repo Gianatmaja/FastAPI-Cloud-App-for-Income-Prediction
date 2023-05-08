@@ -45,7 +45,7 @@ Our assessment of the model's fairness across different population subgroups, us
 
 ![Model Fairness Notebook](https://github.com/Gianatmaja/fastapi-cloud-app/blob/main/screenshots/fairness.png)
 
-For more information, refer to the [Aequitas documentation](https://dssg.github.io/aequitas/30_seconds_aequitas.html).
+For more information on model fairness and Aequitas, refer to the [Aequitas documentation](https://dssg.github.io/aequitas/30_seconds_aequitas.html).
 
 ## Caveats and Recommendations
 Caveats:
