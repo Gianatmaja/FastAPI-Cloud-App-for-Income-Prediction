@@ -1,5 +1,5 @@
 [core]
-    remote = localremote
+    remote = myremote
 ['remote "localremote"']
     url = ../../local_remote_dir
 ['remote "myremote"']
