@@ -6,7 +6,7 @@ The main files of this repository follow the following structure.
 
     .
     ├── .dvc/                                   # DVC Configs
-    ├── .github/workflows                       # CI/CD (with Github Actions) Codes
+    ├── .github/workflows/                      # CI/CD (with Github Actions) Codes
     ├── data/                                   # Metadata for Input Data (DVC Enabled)
     ├── model/                                  # Metadata for Model-Related Files (DVC Enabled)
     ├── notebooks/                              # Jupyter Notebooks 
